@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">MeNTS_v4</string>
     <array name="spinner1_Pt">
+        <item>Seleccione</item>
         <item>Menor a 20 (Joven)</item>
         <item>Entre 21 y 40 (Adulto joven)</item>
         <item>Entre 41 y 50 (Adulto)</item>
@@ -8,6 +9,7 @@
         <item>Mayor a 65 (Anciano)</item>
     </array>
     <array name="spinner2_Pt">
+        <item>Seleccione</item>
         <item>Joven (No presenta)</item>
         <item>Adulto joven (No aplica)</item>
         <item>Adulto (No aplica)</item>
@@ -15,6 +17,7 @@
         <item>Anciano (Usa frecuentemente inhaladores)</item>
     </array>
     <array name="spinner3_Pt">
+        <item>Seleccione</item>
         <item>No presenta</item>
         <item>Adulto joven (No aplica)</item>
         <item>Adulto (No aplica)</item>
@@ -22,6 +25,7 @@
         <item>Requiere uso de CPAP</item>
     </array>
     <array name="spinner4_Pt">
+        <item>Seleccione</item>
         <item>No presenta</item>
         <item>Minima sin medicamentos</item>
         <item>Leve (1 medicamento)</item>
@@ -29,6 +33,7 @@
         <item>Severa (3 o más medicamentos)</item>
     </array>
     <array name="spinner5_Pt">
+        <item>Seleccione</item>
         <item>No presenta</item>
         <item>Adulto joven (No aplica)</item>
         <item>Leve (sin medicamentos)</item>
@@ -36,6 +41,7 @@
         <item>Severa (uso de insulina)</item>
     </array>
     <array name="spinner6_Pt">
+        <item>Seleccione</item>
         <item>No presenta</item>
         <item>Adulto joven (No aplica)</item>
         <item>Leve</item>
@@ -43,6 +49,7 @@
         <item>Severa</item>
     </array>
     <array name="spinner7_Pt">
+        <item>Seleccione</item>
         <item>Asintomático</item>
         <item>Adulto joven (No aplica)</item>
         <item>Adulto (No aplica)</item>
@@ -50,6 +57,7 @@
         <item>Sintomático</item>
     </array>
     <array name="spinner_8_Pt">
+        <item>Seleccione</item>
         <item>No</item>
         <item>Probablemente no</item>
         <item>Posiblemente</item>
@@ -58,6 +66,7 @@
     </array>
 
     <array name="spinner2_Et">
+        <item>Seleccione</item>
         <item>No disponibilidad</item>
         <item>Disponible, menor al 40% de efectividad</item>
         <item>Disponible, 40-60% efectividad</item>
@@ -65,6 +74,7 @@
         <item>Disponible, 100% efectividad</item>
     </array>
     <array name="spinner3_Et">
+        <item>Seleccione</item>
         <item>No aplicable</item>
         <item>Inferior al manejo quirúrgico</item>
         <item>Equivalente al manejo quirúrgico</item>
@@ -72,6 +82,7 @@
         <item>Superior al manejo quirúrgico</item>
     </array>
     <array name="spinner4_Et">
+        <item>Seleccione</item>
         <item>No hay impacto negativo</item>
         <item>Impacto significativamente negativo</item>
         <item>Impacto negativo</item>
@@ -79,6 +90,7 @@
         <item>Impacto minimamente negativo</item>
     </array>
     <array name="spinner5_Et">
+        <item>Seleccione</item>
         <item>No hay impacto negativo</item>
         <item>Impacto significativamente negativo</item>
         <item>Impacto negativo</item>
@@ -86,6 +98,7 @@
         <item>Impacto minimamente negativo</item>
     </array>
     <array name="spinner6_Et">
+        <item>Seleccione</item>
         <item>No hay impacto negativo</item>
         <item>Impacto significativamente negativo</item>
         <item>Impacto negativo</item>
@@ -93,6 +106,7 @@
         <item>Impacto minimamente negativo</item>
     </array>
     <array name="spinner7_Et">
+        <item>Seleccione</item>
         <item>No hay impacto negativo</item>
         <item>Impacto significativamente negativo</item>
         <item>Impacto negativo</item>
@@ -109,6 +123,7 @@
     <string name="next">Next</string>
 
     <array name="options_1_q_1">
+        <item>Seleccione</item>
         <item>Menos de 30min</item>
         <item>Entre 31-60min</item>
         <item>Entre 61-120min</item>
@@ -116,6 +131,7 @@
         <item>Más de 180min</item>
     </array>
     <array name="options_2_q_1">
+        <item>Seleccione</item>
         <item>Ambulatorio</item>
         <item>Menos de 23h</item>
         <item>Entre 24-48h</item>
@@ -123,6 +139,7 @@
         <item>Más de 4 días</item>
     </array>
     <array name="options_3_q_1">
+        <item>Seleccione</item>
         <item>Poco probable</item>
         <item>menor al 5%</item>
         <item>Entre 5-10%</item>
@@ -130,6 +147,7 @@
         <item>Mayor al 25%</item>
     </array>
     <array name="options_4_q_1">
+        <item>Seleccione</item>
         <item>Menor a 100cc</item>
         <item>Entre 100-250cc</item>
         <item>Entre 250-500cc</item>
@@ -137,13 +155,15 @@
         <item>Mayor a 751cc</item>
     </array>
     <array name="options_5_q_1">
-        <item>1</item>
-        <item>2</item>
-        <item>3</item>
-        <item>4</item>
-        <item>5</item>
+        <item>Seleccione</item>
+        <item>Una personas</item>
+        <item>Dos personas</item>
+        <item>Tres personas</item>
+        <item>Cuatro personas</item>
+        <item>Cinco personas</item>
     </array>
     <array name="options_6_q_1">
+        <item>Seleccione</item>
         <item>Menor al 1%</item>
         <item>Entre el 1-5%</item>
         <item>Entre el 6-10%</item>
@@ -151,6 +171,7 @@
         <item>Mayor al 25%</item>
     </array>
     <array name="options_7_q_1">
+        <item>Seleccione</item>
         <item>Ninguno de los siguientes</item>
         <item>Cirugía Abdominopélvica poco invasiva</item>
         <item>Cirugía Abdominopélvica abierta e infraumbilical</item>

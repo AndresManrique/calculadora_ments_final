@@ -74,12 +74,14 @@ public class vresultado extends Fragment {
                         .navigate(R.id.action_vresultado_to_bienvenida);
             }
         });
-
+        System.out.println("-------------------------------Resultados----------------------------------");
         TextView resultado = view.findViewById(R.id.textview_first_paciente);
-        int puntaje_paciente = vresultadoArgs.fromBundle(getArguments()).getValorPacienteR();
-        int puntaje_procedimiento = vresultadoArgs.fromBundle(getArguments()).getValorProcedimientoR();
+
+        assert getArguments() != null;
         int puntaje_enfermdedad = vresultadoArgs.fromBundle(getArguments()).getValorEnfermedadR(); // Resultado de Args
-        int puntaje_final = puntaje_paciente + puntaje_procedimiento + puntaje_enfermdedad;
+        System.out.println("Puntaje enfermedad "+ puntaje_enfermdedad + " !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+        int puntaje_final = puntaje_enfermdedad;
+        System.out.println("Puntaje total "+ puntaje_final + " !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
         resultado.setText("" + puntaje_final);
     };
 

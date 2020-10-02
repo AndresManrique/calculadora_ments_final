@@ -22,6 +22,15 @@ import android.widget.Spinner;
 public class venfermedad extends Fragment {
 
     int puntaje_enfermedad = 0;
+    int spinner_prev_e1 = 0;
+    int spinner_prev_e2 = 0;
+    int spinner_prev_e3 = 0;
+    int spinner_prev_e4 = 0;
+    int spinner_prev_e5 = 0;
+    int spinner_prev_e6 = 0;
+    int valor_paciente_imported;
+
+
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -73,8 +82,12 @@ public class venfermedad extends Fragment {
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        final int[] puntajes={1,1,2,3,4,5};
+        assert getArguments() != null;
+        valor_paciente_imported = venfermedadArgs.fromBundle(getArguments()).getValorPaciente2();
+        System.out.println("Valor recibido: " + valor_paciente_imported + "!!!!!!!!!!!!!!!!" );
 
+        final int[] puntajes={0,1,2,3,4,5};
+        System.out.println("-------------------------------Enfermedad----------------------------------");
         //Spinners
         //Spinner 2_E
         Spinner spinner2_E = (Spinner) view.findViewById(R.id.spinner2_E);
@@ -85,7 +98,9 @@ public class venfermedad extends Fragment {
         spinner2_E.setOnItemSelectedListener(new Spinner.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int i, long id) {
-                puntaje_enfermedad = puntaje_enfermedad + puntajes[i];
+                puntaje_enfermedad = puntaje_enfermedad + puntajes[i] - spinner_prev_e1;
+                spinner_prev_e1 = puntajes[i];
+                System.out.println("Puntaje spinner 1: "+puntaje_enfermedad+ " !!!!!!!!!!!!!!!!!!!!!!!!!!");
                 //String text = parent.getItemAtPosition(position).toString();
                 //Toast.makeText(parent.getContext(), text, Toast.LENGTH_SHORT).show();
             }
@@ -103,7 +118,9 @@ public class venfermedad extends Fragment {
         spinner3_E.setOnItemSelectedListener(new Spinner.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int i, long id) {
-                puntaje_enfermedad = puntaje_enfermedad + puntajes[i];
+                puntaje_enfermedad = puntaje_enfermedad + puntajes[i] - spinner_prev_e2;
+                spinner_prev_e2 = puntajes[i];
+                System.out.println("Puntaje spinner 2: "+puntaje_enfermedad+ " !!!!!!!!!!!!!!!!!!!!!!!!!!");
             }
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
@@ -119,7 +136,9 @@ public class venfermedad extends Fragment {
         spinner4_E.setOnItemSelectedListener(new Spinner.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int i, long id) {
-                puntaje_enfermedad = puntaje_enfermedad + puntajes[i];
+                puntaje_enfermedad = puntaje_enfermedad + puntajes[i] - spinner_prev_e3;
+                spinner_prev_e3 = puntajes[i];
+                System.out.println("Puntaje spinner 3: "+puntaje_enfermedad+ " !!!!!!!!!!!!!!!!!!!!!!!!!!");
             }
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
@@ -135,7 +154,9 @@ public class venfermedad extends Fragment {
         spinner5_E.setOnItemSelectedListener(new Spinner.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int i, long id) {
-                puntaje_enfermedad = puntaje_enfermedad + puntajes[i];
+                puntaje_enfermedad = puntaje_enfermedad + puntajes[i] - spinner_prev_e4;
+                spinner_prev_e4 = puntajes[i];
+                System.out.println("Puntaje spinner 4: "+puntaje_enfermedad+ " !!!!!!!!!!!!!!!!!!!!!!!!!!");
             }
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
@@ -151,7 +172,9 @@ public class venfermedad extends Fragment {
         spinner6_E.setOnItemSelectedListener(new Spinner.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int i, long id) {
-                puntaje_enfermedad = puntaje_enfermedad + puntajes[i];
+                puntaje_enfermedad = puntaje_enfermedad + puntajes[i] - spinner_prev_e5;
+                spinner_prev_e5 =  puntajes[i];
+                System.out.println("Puntaje spinner 5: "+puntaje_enfermedad+ " !!!!!!!!!!!!!!!!!!!!!!!!!!");
             }
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
@@ -167,7 +190,9 @@ public class venfermedad extends Fragment {
         spinner7_E.setOnItemSelectedListener(new Spinner.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int i, long id) {
-                puntaje_enfermedad = puntaje_enfermedad + puntajes[i];
+                puntaje_enfermedad = puntaje_enfermedad + puntajes[i] - spinner_prev_e6;
+                spinner_prev_e6 = puntajes[i];
+                System.out.println("Puntaje spinner 6: "+puntaje_enfermedad+ " !!!!!!!!!!!!!!!!!!!!!!!!!!");
             }
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
@@ -179,7 +204,7 @@ public class venfermedad extends Fragment {
             @Override
             public void onClick(View view) {
                 venfermedadDirections.ActionVenfermedadToVresultado action_set_enfermedad = venfermedadDirections.actionVenfermedadToVresultado();
-                action_set_enfermedad.setValorEnfermedadR(puntaje_enfermedad);
+                action_set_enfermedad.setValorEnfermedadR(puntaje_enfermedad + valor_paciente_imported);
                 NavHostFragment.findNavController(venfermedad.this)
                         .navigate(action_set_enfermedad);
             }

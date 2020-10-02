@@ -14,6 +14,14 @@ import androidx.navigation.fragment.NavHostFragment;
 
 public class vprocedimiento extends Fragment {
     int puntaje_procedimiento = 0;
+    int spinner_prev_1 = 0;
+    int spinner_prev_2 = 0;
+    int spinner_prev_3 = 0;
+    int spinner_prev_4 = 0;
+    int spinner_prev_5 = 0;
+    int spinner_prev_6 = 0;
+    int spinner_prev_7 = 0;
+
     @Override
     public View onCreateView(
             LayoutInflater inflater, ViewGroup container,
@@ -26,8 +34,8 @@ public class vprocedimiento extends Fragment {
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        final int[] puntajesPr={1,1,2,3,4,5};
-
+        final int[] puntajesPr={0,1,2,3,4,5};
+        System.out.println("-------------------------------procedimiento----------------------------------");
         //Spinners
         //Spinner 1
         Spinner spinner_Pr1 = (Spinner) view.findViewById(R.id.spinner_1_q_1);
@@ -38,7 +46,9 @@ public class vprocedimiento extends Fragment {
         spinner_Pr1.setOnItemSelectedListener(new Spinner.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int i, long id) {
-                puntaje_procedimiento = puntaje_procedimiento + puntajesPr[i];
+                puntaje_procedimiento = puntaje_procedimiento + puntajesPr[i] - spinner_prev_1;
+                spinner_prev_1 = puntajesPr[i];
+                System.out.println("Puntaje spinner 1: "+puntaje_procedimiento+ " !!!!!!!!!!!!!!!!!!!!!!!!!!");
                 //String text = parent.getItemAtPosition(position).toString();
                 //Toast.makeText(parent.getContext(), text, Toast.LENGTH_SHORT).show();
             }
@@ -55,7 +65,9 @@ public class vprocedimiento extends Fragment {
         spinner_Pr2.setOnItemSelectedListener(new Spinner.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int i, long id) {
-                puntaje_procedimiento = puntaje_procedimiento + puntajesPr[i];
+                puntaje_procedimiento = puntaje_procedimiento + puntajesPr[i] - spinner_prev_2;
+                spinner_prev_2 = puntajesPr[i];
+                System.out.println("Puntaje spinner 2: "+puntaje_procedimiento+ " !!!!!!!!!!!!!!!!!!!!!!!!!!");
             }
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
@@ -70,7 +82,9 @@ public class vprocedimiento extends Fragment {
         spinner_Pr3.setOnItemSelectedListener(new Spinner.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int i, long id) {
-                puntaje_procedimiento = puntaje_procedimiento + puntajesPr[i];
+                puntaje_procedimiento = puntaje_procedimiento + puntajesPr[i] - spinner_prev_3;
+                spinner_prev_3 = puntajesPr[i];
+                System.out.println("Puntaje spinner 3: "+puntaje_procedimiento+ " !!!!!!!!!!!!!!!!!!!!!!!!!!");
             }
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
@@ -85,7 +99,9 @@ public class vprocedimiento extends Fragment {
         spinner_Pr4.setOnItemSelectedListener(new Spinner.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int i, long id) {
-                puntaje_procedimiento = puntaje_procedimiento + puntajesPr[i];
+                puntaje_procedimiento = puntaje_procedimiento + puntajesPr[i] - spinner_prev_4;
+                spinner_prev_4 = puntajesPr[i];
+                System.out.println("Puntaje spinner 4: "+puntaje_procedimiento+ " !!!!!!!!!!!!!!!!!!!!!!!!!!");
             }
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
@@ -100,7 +116,9 @@ public class vprocedimiento extends Fragment {
         spinner_Pr5.setOnItemSelectedListener(new Spinner.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int i, long id) {
-                puntaje_procedimiento = puntaje_procedimiento + puntajesPr[i];
+                puntaje_procedimiento = puntaje_procedimiento + puntajesPr[i] - spinner_prev_5;
+                spinner_prev_5 = puntajesPr[i];
+                System.out.println("Puntaje spinner 5: "+puntaje_procedimiento+ " !!!!!!!!!!!!!!!!!!!!!!!!!!");
             }
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
@@ -115,7 +133,9 @@ public class vprocedimiento extends Fragment {
         spinner_Pr6.setOnItemSelectedListener(new Spinner.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int i, long id) {
-                puntaje_procedimiento = puntaje_procedimiento + puntajesPr[i];
+                puntaje_procedimiento = puntaje_procedimiento + puntajesPr[i] -spinner_prev_6;
+                spinner_prev_6 = puntajesPr[i];
+                System.out.println("Puntaje spinner 6: "+puntaje_procedimiento+ " !!!!!!!!!!!!!!!!!!!!!!!!!!");
             }
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
@@ -130,7 +150,9 @@ public class vprocedimiento extends Fragment {
         spinner_Pr7.setOnItemSelectedListener(new Spinner.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int i, long id) {
-                puntaje_procedimiento = puntaje_procedimiento + puntajesPr[i];
+                puntaje_procedimiento = puntaje_procedimiento + puntajesPr[i] - spinner_prev_7;
+                spinner_prev_7 = puntajesPr[i];
+                System.out.println("Puntaje spinner 7: "+puntaje_procedimiento+ " !!!!!!!!!!!!!!!!!!!!!!!!!!");
             }
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
@@ -139,8 +161,9 @@ public class vprocedimiento extends Fragment {
         view.findViewById(R.id.button_vprocedimiento).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                vprocedimientoDirections.ActionVprocedimientoToVresultado actionVprocedimientoToVresultado4 = vprocedimientoDirections.actionVprocedimientoToVresultado();
-                actionVprocedimientoToVresultado4.setValorProcedimientoR(puntaje_procedimiento);
+                vprocedimientoDirections.ActionVprocedimientoToVpaciente set_puntaje_procedimiento = vprocedimientoDirections.actionVprocedimientoToVpaciente();
+                set_puntaje_procedimiento.setValorProcedimiento2(puntaje_procedimiento);
+                System.out.println("Valor enviado: "+puntaje_procedimiento+ " !!!!!!!!!!!!!!!!!!!!!!!!!!");
                 NavHostFragment.findNavController(vprocedimiento.this)
                         .navigate(R.id.action_vprocedimiento_to_vpaciente);
             }

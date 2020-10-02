@@ -20,6 +20,16 @@ import android.widget.Spinner;
  */
 public class vpaciente extends Fragment {
     int puntaje_paciente = 0;
+    int spinner_prev_p1 = 0;
+    int spinner_prev_p2 = 0;
+    int spinner_prev_p3 = 0;
+    int spinner_prev_p4 = 0;
+    int spinner_prev_p5 = 0;
+    int spinner_prev_p6 = 0;
+    int spinner_prev_p7 = 0;
+    int spinner_prev_p8 = 0;
+    int valor_procedimiento_imported;
+
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -71,8 +81,12 @@ public class vpaciente extends Fragment {
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        final int[] puntajesPa={1,1,2,3,4,5};
+        assert getArguments() != null;
+        valor_procedimiento_imported = vpacienteArgs.fromBundle(getArguments()).getValorProcedimiento2();
+        System.out.println("Valor recibido: " + valor_procedimiento_imported + " !!!!!!!!!!!!!!!!!!!!");
 
+        final int[] puntajesPa={0,1,2,3,4,5};
+        System.out.println("-------------------------------Paciente----------------------------------");
         //Spinners
         //Spinner 1
         Spinner spinner1 = (Spinner) view.findViewById(R.id.spinner1);
@@ -83,7 +97,9 @@ public class vpaciente extends Fragment {
         spinner1.setOnItemSelectedListener(new Spinner.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int i, long id) {
-                puntaje_paciente = puntaje_paciente + puntajesPa[i];
+                puntaje_paciente = puntaje_paciente + puntajesPa[i] - spinner_prev_p1;
+                spinner_prev_p1 = puntajesPa[i];
+                System.out.println("Puntaje spinner 1: "+puntaje_paciente+ " !!!!!!!!!!!!!!!!!!!!!!!!!!");
             }
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
@@ -98,7 +114,9 @@ public class vpaciente extends Fragment {
         spinner2.setOnItemSelectedListener(new Spinner.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int i, long id) {
-                puntaje_paciente = puntaje_paciente + puntajesPa[i];
+                puntaje_paciente = puntaje_paciente + puntajesPa[i] - spinner_prev_p2;
+                spinner_prev_p2 = puntajesPa[i];
+                System.out.println("Puntaje spinner 2: "+puntaje_paciente+ " !!!!!!!!!!!!!!!!!!!!!!!!!!");
                 //String text = parent.getItemAtPosition(position).toString();
                 //Toast.makeText(parent.getContext(), text, Toast.LENGTH_SHORT).show();
             }
@@ -115,7 +133,9 @@ public class vpaciente extends Fragment {
         spinner3.setOnItemSelectedListener(new Spinner.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int i, long id) {
-                puntaje_paciente = puntaje_paciente + puntajesPa[i];
+                puntaje_paciente = puntaje_paciente + puntajesPa[i] - spinner_prev_p3;
+                spinner_prev_p3 = puntajesPa[i];
+                System.out.println("Puntaje spinner 3: "+puntaje_paciente+ " !!!!!!!!!!!!!!!!!!!!!!!!!!");
             }
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
@@ -130,7 +150,9 @@ public class vpaciente extends Fragment {
         spinner4.setOnItemSelectedListener(new Spinner.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int i, long id) {
-                puntaje_paciente = puntaje_paciente + puntajesPa[i];
+                puntaje_paciente = puntaje_paciente + puntajesPa[i] - spinner_prev_p4;
+                spinner_prev_p4 = puntajesPa[i];
+                System.out.println("Puntaje spinner 4: "+puntaje_paciente+ " !!!!!!!!!!!!!!!!!!!!!!!!!!");
             }
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
@@ -145,7 +167,9 @@ public class vpaciente extends Fragment {
         spinner5.setOnItemSelectedListener(new Spinner.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int i, long id) {
-                puntaje_paciente = puntaje_paciente + puntajesPa[i];
+                puntaje_paciente = puntaje_paciente + puntajesPa[i] -spinner_prev_p5;
+                spinner_prev_p5 = puntajesPa[i];
+                System.out.println("Puntaje spinner 5: "+puntaje_paciente+ " !!!!!!!!!!!!!!!!!!!!!!!!!!");
             }
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
@@ -160,7 +184,9 @@ public class vpaciente extends Fragment {
         spinner6.setOnItemSelectedListener(new Spinner.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int i, long id) {
-                puntaje_paciente = puntaje_paciente + puntajesPa[i];
+                puntaje_paciente = puntaje_paciente + puntajesPa[i] - spinner_prev_p6;
+                spinner_prev_p6 = puntajesPa[i];
+                System.out.println("Puntaje spinner 6: "+puntaje_paciente+ " !!!!!!!!!!!!!!!!!!!!!!!!!!");
             }
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
@@ -175,14 +201,16 @@ public class vpaciente extends Fragment {
         spinner7.setOnItemSelectedListener(new Spinner.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int i, long id) {
-                puntaje_paciente = puntaje_paciente + puntajesPa[i];
+                puntaje_paciente = puntaje_paciente + puntajesPa[i] - spinner_prev_p7;
+                spinner_prev_p7 = puntajesPa[i];
+                System.out.println("Puntaje spinner 7: "+puntaje_paciente+ " !!!!!!!!!!!!!!!!!!!!!!!!!!");
             }
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
             }
         });
         //Spinner 8
-        Spinner spinner8 = (Spinner) view.findViewById(R.id.spinner_5_q_1);
+        Spinner spinner8 = (Spinner) view.findViewById(R.id.spinner_8);
         ArrayAdapter<CharSequence> adapter8 = ArrayAdapter.createFromResource(getContext(),
                 R.array.spinner_8_Pt, android.R.layout.simple_spinner_item);
         adapter8.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -190,7 +218,9 @@ public class vpaciente extends Fragment {
         spinner8.setOnItemSelectedListener(new Spinner.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int i, long id) {
-                puntaje_paciente = puntaje_paciente + puntajesPa[i];
+                puntaje_paciente = puntaje_paciente + puntajesPa[i] - spinner_prev_p8;
+                spinner_prev_p8 = puntajesPa[i];
+                System.out.println("Puntaje spinner 8: "+puntaje_paciente+ " !!!!!!!!!!!!!!!!!!!!!!!!!!");
             }
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
@@ -200,8 +230,8 @@ public class vpaciente extends Fragment {
         view.findViewById(R.id.button_vpaciente).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                vpacienteDirections.ActionVpacienteToVresultado action_set_paciente = vpacienteDirections.actionVpacienteToVresultado();
-                action_set_paciente.setValorEnfermedadR(puntaje_paciente);
+                vpacienteDirections.ActionVpacienteToVenfermedad action_set_paciente_2 = vpacienteDirections.actionVpacienteToVenfermedad();
+                action_set_paciente_2.setValorPaciente2(puntaje_paciente + valor_procedimiento_imported);
                 NavHostFragment.findNavController(vpaciente.this)
                         .navigate(R.id.action_vpaciente_to_venfermedad);
             }
