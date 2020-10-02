@@ -1,42 +1,55 @@
 <resources>
     <string name="app_name">MeNTS_v4</string>
-    <array name="spinner2">
-        <item>No presenta</item>
-        <item>Usa minimamente inhaladores</item>
-        <item>Usa frecuentemente inhaladores</item>
+    <array name="spinner1_Pt">
+        <item>Menor a 20 (Joven)</item>
+        <item>Entre 21 y 40 (Adulto joven)</item>
+        <item>Entre 41 y 50 (Adulto)</item>
+        <item>Entre 51 y 65 (Adulto mayor)</item>
+        <item>Mayor a 65 (Anciano)</item>
     </array>
-    <array name="spinner3">
+    <array name="spinner2_Pt">
+        <item>Joven (No presenta)</item>
+        <item>Adulto joven (No aplica)</item>
+        <item>Adulto (No aplica)</item>
+        <item>Adulto mayor (Usa minimamente inhaladores)</item>
+        <item>Anciano (Usa frecuentemente inhaladores)</item>
+    </array>
+    <array name="spinner3_Pt">
         <item>No presenta</item>
+        <item>Adulto joven (No aplica)</item>
+        <item>Adulto (No aplica)</item>
         <item>Leve (sin uso de CPAP)</item>
         <item>Requiere uso de CPAP</item>
-        <item>entre 121-180min</item>
-        <item>más de 180min</item>
     </array>
-    <array name="spinner4">
+    <array name="spinner4_Pt">
         <item>No presenta</item>
         <item>Minima sin medicamentos</item>
         <item>Leve (1 medicamento)</item>
         <item>Moderada (2 medicamentos)</item>
         <item>Severa (3 o más medicamentos)</item>
     </array>
-    <array name="spinner5">
+    <array name="spinner5_Pt">
         <item>No presenta</item>
+        <item>Adulto joven (No aplica)</item>
         <item>Leve (sin medicamentos)</item>
         <item>Moderada (medicamentos orales)</item>
         <item>Severa (uso de insulina)</item>
     </array>
-    <array name="spinner6">
+    <array name="spinner6_Pt">
         <item>No presenta</item>
+        <item>Adulto joven (No aplica)</item>
         <item>Leve</item>
         <item>Moderada</item>
         <item>Severa</item>
     </array>
-    <array name="spinner7">
+    <array name="spinner7_Pt">
         <item>Asintomático</item>
-        <item>No presenta</item>
+        <item>Adulto joven (No aplica)</item>
+        <item>Adulto (No aplica)</item>
+        <item>Adulto mayor (No aplica)</item>
         <item>Sintomático</item>
     </array>
-    <array name="spinner_8">
+    <array name="spinner_8_Pt">
         <item>No</item>
         <item>Probablemente no</item>
         <item>Posiblemente</item>
@@ -44,42 +57,42 @@
         <item>Si</item>
     </array>
 
-    <array name="spinner2_E">
+    <array name="spinner2_Et">
         <item>No disponibilidad</item>
         <item>Disponible, menor al 40% de efectividad</item>
         <item>Disponible, 40-60% efectividad</item>
         <item>Disponible, 60-95% efectividad</item>
         <item>Disponible, 100% efectividad</item>
     </array>
-    <array name="spinner3_E">
+    <array name="spinner3_Et">
         <item>No aplicable</item>
         <item>Inferior al manejo quirúrgico</item>
-        <item>Eqiovalente al manejo quirúrgico</item>
+        <item>Equivalente al manejo quirúrgico</item>
         <item>Posiblemente mejor que el manejo quirúrgico</item>
         <item>Superior al manejo quirúrgico</item>
     </array>
-    <array name="spinner4_E">
+    <array name="spinner4_Et">
         <item>No hay impacto negativo</item>
         <item>Impacto significativamente negativo</item>
         <item>Impacto negativo</item>
         <item>Impacto moderadamente negativo</item>
         <item>Impacto minimamente negativo</item>
     </array>
-    <array name="spinner5_E">
+    <array name="spinner5_Et">
         <item>No hay impacto negativo</item>
         <item>Impacto significativamente negativo</item>
         <item>Impacto negativo</item>
         <item>Impacto moderadamente negativo</item>
         <item>Impacto minimamente negativo</item>
     </array>
-    <array name="spinner6_E">
+    <array name="spinner6_Et">
         <item>No hay impacto negativo</item>
         <item>Impacto significativamente negativo</item>
         <item>Impacto negativo</item>
         <item>Impacto moderadamente negativo</item>
         <item>Impacto minimamente negativo</item>
     </array>
-    <array name="spinner7_E">
+    <array name="spinner7_Et">
         <item>No hay impacto negativo</item>
         <item>Impacto significativamente negativo</item>
         <item>Impacto negativo</item>
@@ -137,6 +150,13 @@
         <item>Entre el 11-25%</item>
         <item>Mayor al 25%</item>
     </array>
+    <array name="options_7_q_1">
+        <item>Ninguno de los siguientes</item>
+        <item>Cirugía Abdominopélvica poco invasiva</item>
+        <item>Cirugía Abdominopélvica abierta e infraumbilical</item>
+        <item>Cirugía Abdominopélvica abierta y supraumbilical</item>
+        <item>Cirugía de otorrinolaringología, del tracto gastrointestinal superior ó de tórax</item>
+    </array>
     <string name="action_settings">Settings</string>
     <string name="start_text_1">La calculadora MeNTS incorpora factores para realizar un juicio clínico integral con el objetivo de sopesar los riesgos individuales apegándose a la necesidad ética de optimizar los recursos para la salud publica.</string>
     <string name="start_text_2">Para encontrar su puntaje según este sistema, responda las siguientes preguntas:</string>
@@ -169,4 +189,12 @@
     <string name="text_button_final">Empezar de nuevo</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="todo">TODO</string>
+    <string name="todoEn">TODOEN</string>
+    <string name="todoPr">TODOPR</string>
+    <string name="todoPa">TODOPA</string>
+    <string name="todopoF">TODOPOF</string>
+    <string name="todoPaf">TODOPAF</string>
+    <string name="todoEnf">TODOENF</string>
+    <string name="todoImgfi">TODOIMGFi</string>
 </resources>

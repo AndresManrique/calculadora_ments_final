@@ -76,9 +76,10 @@ public class venfermedad extends Fragment {
         final int[] puntajes={1,1,2,3,4,5};
 
         //Spinners
+        //Spinner 2_E
         Spinner spinner2_E = (Spinner) view.findViewById(R.id.spinner2_E);
         ArrayAdapter<CharSequence> adapter2_E = ArrayAdapter.createFromResource(getContext(),
-                R.array.spinner2_E, android.R.layout.simple_spinner_item);
+                R.array.spinner2_Et, android.R.layout.simple_spinner_item);
         adapter2_E.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner2_E.setAdapter(adapter2_E);
         spinner2_E.setOnItemSelectedListener(new Spinner.OnItemSelectedListener() {
@@ -93,11 +94,91 @@ public class venfermedad extends Fragment {
 
             }
         });
+        //Spinner 3_E
+        Spinner spinner3_E = (Spinner) view.findViewById(R.id.spinner3_E);
+        ArrayAdapter<CharSequence> adapter3_E = ArrayAdapter.createFromResource(getContext(),
+                R.array.spinner3_Et, android.R.layout.simple_spinner_item);
+        adapter3_E.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner3_E.setAdapter(adapter3_E);
+        spinner3_E.setOnItemSelectedListener(new Spinner.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int i, long id) {
+                puntaje_enfermedad = puntaje_enfermedad + puntajes[i];
+            }
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+        //Spinner 4_E
+        Spinner spinner4_E = (Spinner) view.findViewById(R.id.spinner4_E);
+        ArrayAdapter<CharSequence> adapter4_E = ArrayAdapter.createFromResource(getContext(),
+                R.array.spinner4_Et, android.R.layout.simple_spinner_item);
+        adapter4_E.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner4_E.setAdapter(adapter4_E);
+        spinner4_E.setOnItemSelectedListener(new Spinner.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int i, long id) {
+                puntaje_enfermedad = puntaje_enfermedad + puntajes[i];
+            }
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+        //Spinner 5_E
+        Spinner spinner5_E = (Spinner) view.findViewById(R.id.spinner5_E);
+        ArrayAdapter<CharSequence> adapter5_E = ArrayAdapter.createFromResource(getContext(),
+                R.array.spinner5_Et, android.R.layout.simple_spinner_item);
+        adapter5_E.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner5_E.setAdapter(adapter5_E);
+        spinner5_E.setOnItemSelectedListener(new Spinner.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int i, long id) {
+                puntaje_enfermedad = puntaje_enfermedad + puntajes[i];
+            }
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+        //Spinner 6_E
+        Spinner spinner6_E = (Spinner) view.findViewById(R.id.spinner6_E);
+        ArrayAdapter<CharSequence> adapter6_E = ArrayAdapter.createFromResource(getContext(),
+                R.array.spinner6_Et, android.R.layout.simple_spinner_item);
+        adapter6_E.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner6_E.setAdapter(adapter6_E);
+        spinner6_E.setOnItemSelectedListener(new Spinner.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int i, long id) {
+                puntaje_enfermedad = puntaje_enfermedad + puntajes[i];
+            }
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+        //Spinner 7_E
+        Spinner spinner7_E = (Spinner) view.findViewById(R.id.spinner7_E);
+        ArrayAdapter<CharSequence> adapter7_E = ArrayAdapter.createFromResource(getContext(),
+                R.array.spinner7_Et, android.R.layout.simple_spinner_item);
+        adapter7_E.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner7_E.setAdapter(adapter7_E);
+        spinner7_E.setOnItemSelectedListener(new Spinner.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int i, long id) {
+                puntaje_enfermedad = puntaje_enfermedad + puntajes[i];
+            }
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
 
         view.findViewById(R.id.button_venfermedad).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                venfermedadDirections.ActionVenfermedadToVresultado action_set_enfermedad = venfermedadDirections.actionVenfermedadToVresultado(0,0,0);
+                venfermedadDirections.ActionVenfermedadToVresultado action_set_enfermedad = venfermedadDirections.actionVenfermedadToVresultado();
                 action_set_enfermedad.setValorEnfermedadR(puntaje_enfermedad);
                 NavHostFragment.findNavController(venfermedad.this)
                         .navigate(action_set_enfermedad);
